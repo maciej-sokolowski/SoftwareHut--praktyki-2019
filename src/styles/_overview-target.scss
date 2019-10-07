@@ -1,0 +1,41 @@
+.target {
+  position: relative;
+  @include mobile {
+    padding: 140px 5vw 95px;
+  }
+  @include desktop {
+    display: flex;
+    justify-content: space-between;
+    margin: 60px 20vw 0px;
+  }
+  &__item {
+    display: none;
+    @include mobile {
+      &--active {
+        display: block;
+        width: 90vw;
+      }
+    }
+    @include desktop {
+      display: block;
+      width: 31%;
+      height: 100%;
+    }
+  }
+  &__title {
+    @include h2-text;
+    margin-bottom: 40px;
+  }
+  &__description {
+    @include p-text;
+  }
+
+  &__slider-dots {
+    @include slider-dots;
+    bottom: 40px;
+  }
+  &__slider-dot {
+    @include slider-dot;
+  }
+
+}

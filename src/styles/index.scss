@@ -1,0 +1,24 @@
+
+@import "variables-and-mixins";
+@import "text-settings";
+@import "navigation";
+// @import "navigation2";
+// @import "overview-hero";
+@import "overview-hero2";
+@import "overview-target";
+@import "overview-problem-solving";
+@import "form";
+
+
+* {
+  padding: 0px;
+  margin: 0px;
+  text-decoration: none;
+  list-style: none;
+  font-family: $roboto-font;
+}
+
+body {
+  background-color: $background-color;
+}
+

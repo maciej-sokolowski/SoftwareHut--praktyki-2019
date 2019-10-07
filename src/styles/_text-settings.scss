@@ -1,0 +1,66 @@
+
+// text
+@mixin big-headline-text-color {
+    font-family: $poppins-font;
+    font-weight: bold;
+    color: $product-color;
+    font-size: 70px;
+    line-height: 80px;
+  }
+  
+  @mixin description-text {
+    font-family: $roboto-font;
+    color: $text-color;
+    font-size: 30px;
+    line-height: 40px;
+  }
+  
+  @mixin big-headline-text {
+    font-family: $poppins-font;
+    font-weight: bold;
+    color: $text-color;
+    font-size: 70px;
+    line-height: 80px;
+  }
+  
+  @mixin h2-text {
+    font-family: $poppins-font;
+    font-weight: bold;
+    color: $text-color;
+    font-size: 30px;
+    line-height: 40px;
+  }
+  
+  @mixin h3-text {
+    font-family: $poppins-font;
+    font-weight: bold;
+    color: $text-color;
+    font-size: 19px;
+    line-height: 26px;
+  }
+  
+  @mixin h4-text {
+    font-family: $roboto-font;
+    color: $text-color;
+    font-size: 17px;
+  }
+  
+  @mixin p-text {
+    font-family: $roboto-font;
+    color: $text-color;
+    font-size: 17px;
+    line-height: 25px;
+  }
+
+  @mixin form-label-font {
+    font-family: $roboto-font;
+    font-weight: 300;
+    font-size: 13px;
+    color: $text-color;
+  }
+
+  @mixin form-input-font {
+    font-family: $roboto-font;
+    font-size: 30px;
+    color: $text-color;
+  }

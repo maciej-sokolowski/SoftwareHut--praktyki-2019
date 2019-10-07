@@ -1,0 +1,145 @@
+.hero {
+    &__background {
+      height: 500px;
+      position: relative;
+      overflow: hidden;
+      &--desktop {
+        display: none;
+      }
+    }
+    &__image {
+      position: absolute;
+      left: 0px;
+      z-index: 3;
+      bottom: -20%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 300px;
+      &--background {
+        bottom: -10%;;
+        width: 400px;
+        z-index: 2;
+      }
+    }
+    &__headline {
+      @include big-headline-text-color;
+      font-size: 40px;
+      line-height: 50px;
+      width: 330px;
+      position: absolute;
+      top: 80px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2;
+      &--desktop {
+        display: none;
+      }
+    }
+    &__content {
+  
+    }
+    &__description {
+      font-size: 22px;
+      line-height: 32px;
+      width: 300px;
+      margin: 40px auto;
+      letter-spacing: -1px;
+      &--desktop {
+        display: none;
+      }
+    }
+    &__buttons {
+      display: flex;
+      width: 90vw;
+      height: 50px;
+      margin-left: 5vw;
+      // width: 360px;
+      justify-content: space-between;
+    }
+    &__link {
+      display: flex;
+      justify-content: center;
+      width: 50%;
+      height: 100%;
+      overflow: hidden;
+    }
+    &__button {
+      width: 110%;
+      height: 185%;
+      // transform: translateY(-22%);
+      transform: translate(0%,-22%);
+    }
+  
+    @include desktop {
+      height: 750px;
+      display: flex;
+      &__background {
+        display: none;
+        &--desktop {
+          overflow: hidden;
+          display: block;
+          position: absolute;
+          right: 0;
+          height: 750px;
+          width: 45%;
+        }
+      }
+      &__image {
+        height: 800px;
+        width: auto;
+        &--background {
+          position: absolute;
+          width: 100%;
+          // height: auto;
+          // right: 35px;
+          bottom: 70px;
+        }
+      }
+      &__content {
+        // display: none;
+        position: absolute;
+        left: 0;
+        height: 750px;
+        width: 45%;
+      }
+      &__headline {
+        display: block;
+        position: absolute;
+        width: 600px;
+        height: 155px;
+        transform: none;
+        top: 170px;
+        left: 350px;
+        @include big-headline-text-color;
+      }
+      &__description {
+        @include description-text;
+        width: 600px;
+        height: 105px;
+        position: absolute;
+        top: 335px;
+        // bottom: 260px;
+        left: 350px;
+        &--desktop {
+          display: inline;
+        }
+      }
+      &__buttons {
+        position: absolute;
+        margin-left: 0;
+        width: 420px;
+        height: 70px;
+        // bottom: 130px;
+        top: 530px;
+        left: 350px;
+  
+      }
+      &__link {
+       
+      }
+      &__button {
+        transform: translate(-5%, -22%);
+      //  width: 115%;
+      }
+    }
+  }

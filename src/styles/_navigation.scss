@@ -1,0 +1,163 @@
+menu {
+  position: sticky;
+  top: 0;
+  height: 80px;
+  background-color: white;
+  z-index: 10;
+
+  @media (min-width: 500px) {
+    height: 200px;
+    .link-background {
+      display: inline-block;
+      background-color: $product-color;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      width: 280px;
+      height: 80px;
+    }
+  }
+}
+
+.main-nav {
+    &__logo {
+      height: 15px;
+      position: absolute;
+      top: 30px;
+      left: 10px;
+    }
+    &__list { 
+      display: none;
+    }
+    input:checked ~ &__list {
+        display: block;
+        text-align: center;
+        position: absolute;
+        right: 50%;
+        transform: translateX(50%);
+        top: 70px;
+        background-color: white;
+    }
+    &__item {  
+      display: block;
+      margin: 8px auto 0px;
+    }
+    label {
+      width: 14px;
+      height: 14px;
+      color: $product-color;
+      position: absolute;
+      right: 5%;
+      top: 30px;
+    }
+    #hamburger {
+      display: none;
+    } 
+      
+    @media (min-width: 500px) {
+      label {
+        display: none;
+      }
+      .white {
+        color: white;
+      }
+      &__logo {
+        width: 35px;
+        height: auto;
+        left: 5%;
+        bottom: 140px;
+      }
+      &__list {
+        display: flex;
+        height: 20px;
+        width: 800px;
+        position: absolute;
+        top: 50px;
+        right: 0px;
+        justify-content: flex-start;
+      }
+      &__item {
+        margin: 0px 40px 0px 0px;
+        transition: .2s;
+        &:hover {
+          transform: scale(1.2);
+        }
+        a {
+          color: $text-color;
+        }
+        &--task {
+          margin-right: 90px;
+        }
+      }
+    }
+  }
+  
+  .sub-nav {
+    #sub-nav__header {
+      display: none;
+    }
+    &__title {
+      display: none;
+    }
+    &__list {
+      display: none;
+    }
+    input:checked ~ &__list {
+        display: block;
+        text-align: center;
+        position: absolute;
+        right: 50%;
+        transform: translateX(50%);
+        top: 70px;
+        background-color: white;
+    }
+    &__item {
+      display: none;
+      &--link {
+        margin-top: 8px;
+      }
+    }
+    label {
+      position: absolute;
+      right: 50%;
+      top: 30px;
+      transform: translateX(50%);
+      font-size: 15px;
+      .fas {
+        margin-left: 15px;
+        color: #2a2a2a;
+      }
+    }
+  
+    @include desktop {
+      label {
+        display: none;
+      }
+      &__list {
+        display: flex;
+        width: 850px;
+        height: 20px;
+        position: absolute;
+        top: 130px;
+        left: 350px;
+        // left: 18%;
+        justify-content: space-between;
+      }
+      &__item {
+        display: list-item;
+        color: $text-color;
+        &--link {
+          margin: 0px;
+          color: $text-color;
+          transition: .2s;
+          &:hover {
+            transform: scale(1.2);
+          }
+          &--active {
+            font-weight: bold;
+            @include active-tab-underscore;
+          }
+        }
+      }
+    }
+  }

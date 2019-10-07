@@ -1,0 +1,64 @@
+.overview {
+    overflow-x: hidden;
+  }
+  .problem-solving {
+    position: relative;
+    @include desktop {
+      display: flex;
+      justify-content: space-between;
+      margin: 190px auto 0px 20VW;
+      width: 84vw;
+    }
+
+    &__header {
+      @include h4-text;
+      @include mobile {
+      margin: 0 5vw;
+      margin-bottom: 25px;
+      }
+      @include desktop {
+        position: absolute;
+        top: -45px;
+      }
+    }
+    &__item {
+      background-color: white;
+      @include mobile {
+        padding: 50px 5vw 70px;
+        display: none;
+        &--active {
+          display: block;
+        }
+      }
+      @include desktop {
+        box-sizing: border-box;
+        margin: 0px;
+        padding: 4%;
+        width: 19%;
+      }
+    }
+    &__image {
+      display: block;
+      width: 60%;
+      margin: 0px auto 50px;
+      @include desktop {
+        width: 100%;
+        margin-bottom: 70px;
+      }
+    }
+    &__title {
+      @include h3-text;
+      width: 90%;
+      margin-bottom: 35px;
+    }
+    &__description {
+      @include p-text;
+    }
+  
+    &__slider-dots {
+      @include slider-dots;
+    }
+    &__slider-dot {
+      @include slider-dot;
+    }
+  }
